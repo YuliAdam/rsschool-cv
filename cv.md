@@ -121,6 +121,25 @@ public class UserController {
 ```
 
 
+## Experience 
 
+* cv.md for rsschool
+
+
+## Education 
+
+1) Belarus State University Physics faculty 
+
+2)Abforma course "INGLESE-A2"
+
+3)Abforma course "PROGRAMMAZIONE Java-M01"
+
+
+## Languages 
+
+* russian ( nativ)
+* belarusian (nativ)
+* english (A2)
+* italian (C2)
 
  
