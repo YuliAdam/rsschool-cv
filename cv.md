@@ -130,9 +130,9 @@ public class UserController {
 
 1) Belarus State University Physics faculty 
 
-2)Abforma course "INGLESE-A2"
+2) Abforma course "INGLESE-A2"
 
-3)Abforma course "PROGRAMMAZIONE Java-M01"
+3) Abforma course "PROGRAMMAZIONE Java-M01"
 
 
 ## Languages 
