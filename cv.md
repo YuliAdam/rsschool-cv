@@ -137,8 +137,8 @@ public class UserController {
 
 ## Languages 
 
-* russian ( nativ)
-* belarusian (nativ)
+* russian ( native)
+* belarusian (native)
 * english (A2)
 * italian (C2)
 
