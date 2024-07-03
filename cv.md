@@ -14,15 +14,16 @@ LinkedIn: yliaadamovich15@gmail.com
 
 ## About me 
 
-Since childhood, I studied mathematics and physics. I finished the Belarusian State University, Faculty of Physics where I started learning programming. I continued to study developing after university. Currently I’m studying Java Back-end and have also started stydy HTML, CSS and JavaScript. I am study very fast, sociable and positive person.
-
+I am 30 years old, from Belarus. I live in Italy.  I started studying programming at university like and physics and mathematics matters. It was Pascal.  I acquire new skills very quickly because I have mathematical mind. I organize learning and working process very good.  I started studying Java one year ago. I finished course "PROGRAMMAZIONE Java-M01" by Abforma. I used in my test project also Java Spring ( Spring Boot, Spring Security, Spring Data JPA, Spring MVC).  
+I like books, doing long walks, travelling. I am a very positive and kind person, but also responsible and serious at work.  
+I want to work in programming.
 
 ## Skills
 
 * Java
 * SQL
 * MySQL
-
+* A little HTML
 
 ## Code example 
 
