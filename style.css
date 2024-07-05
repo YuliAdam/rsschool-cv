@@ -5,3 +5,6 @@
 p,h1,h2,ul,ol,code{
     text-align: center;
 }
+h1{
+    color: red;
+}
