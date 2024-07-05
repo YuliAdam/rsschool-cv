@@ -1,1 +1,1 @@
-https://github.com/YuliAdam/rsschool-cv/tree/gh-pages/cv.md
+https://yuliadam.github.io/rsschool-cv/cv.md
