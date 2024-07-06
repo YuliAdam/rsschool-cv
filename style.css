@@ -1,1 +1,30 @@
 
+html{
+    background-color: azure;
+    align-content: left;
+}
+.my_photo{
+    display: block;
+    float: right;
+    width: 115px;
+    height: 154px;
+}
+h1{
+    color: red;
+    font-size: 50px;
+    text-align: center;
+}
+h2{
+    text-decoration: underline;
+}
+.container {
+    display: flex;
+    justify-content:space-around;
+    background-color: rosybrown;
+}
+div{
+    text-align: right;
+}
+.list{
+    text-align: left;
+}
