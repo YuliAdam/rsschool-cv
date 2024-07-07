@@ -1,30 +1,51 @@
 
 html{
-    background-color: azure;
-    align-content: left;
+    background-color: rgb(250, 209, 228);
 }
 .my_photo{
-    display: block;
     float: right;
-    width: 115px;
-    height: 154px;
+    width: 150%;
 }
 h1{
-    color: red;
+    color: #ff0088;
     font-size: 50px;
     text-align: center;
 }
 h2{
     text-decoration: underline;
+    text-align: center;
 }
 .container {
     display: flex;
-    justify-content:space-around;
-    background-color: rosybrown;
+    justify-content:center;
+    background-color: rgb(246, 174, 203);
+    border-color: blueviolet;
+    border-style: outset;
+    border-width: 10px;
 }
 div{
-    text-align: right;
+    margin-left: 15%;
+    margin-right: 15%;
 }
-.list{
+section{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+li{
     text-align: left;
+}
+footer{
+    text-align: center;
+}
+#logo{
+    width: 5%;
+}
+#code_example{
+    border-color: blueviolet;
+    border-style: outset;
+    border-width: 5px;
+}
+#skills, #experience,#education,#languages{
+    margin-left: 45%;
+    margin-right: 45%;
 }

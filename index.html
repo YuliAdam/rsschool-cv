@@ -14,26 +14,26 @@
         <div class="container">
             <div>
                 <h2>Contact information</h2>
-                <ul class="list">
+                <ul>
                     <li>tell: +393806959384</li>
                     <li>email: ylia_adamovich@mail.ru</li>
                     <li>LinkedIn: yliaadamovich15@gmail.com</li>
                 </ul>
+                <nav>
+                    <h2>Navigation</h2>
+                    <ol>
+                        <li><a href="#about_me">About me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#code_example">Code example</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#languages">Languages</a></li>
+                    </ol>
+                </nav>
             </div>
             <div><img class="my_photo" src="https://raw.githubusercontent.com/YuliAdam/rsschool-cv/rsschool-cv-html/IMG_5632.jpeg" alt="my photo"></div>
         </div>
     </header>
-    <nav>
-        <h2>Navigation</h2>
-        <ol class="list">
-            <li><a href="#about_me">About me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#code_example">Code example</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#languages">Languages</a></li>
-        </ol>
-    </nav>
     <main>
         <section id="about_me">
             <h2>About me</h2>
@@ -75,7 +75,8 @@ public class UserController {
                                         @RequestParam(required = false, defaultValue = "5") Integer pageSize) {
         model.addAttribute("role",SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString());
         model.addAttribute("currentUserId",userService.getUserByLogin(SecurityContextHolder.getContext().getAuthentication().getName()).getId());
-        model.addAttribute("moneyByCurrentUserId", moneyService.findByUserId(userService.getUserByLogin(SecurityContextHolder.getContext().getAuthentication().getName()).getId()));
+        model.addAttribute("moneyByCurrentUserId", moneyService.findByUserId(userService.getUserByLogin(SecurityContextHolder.getContext()
+            .getAuthentication().getName()).getId()));
 
         model.addAttribute("paramtr",paramtr );
         model.addAttribute("sort",sort );
@@ -109,7 +110,8 @@ public class UserController {
         model.addAttribute("pageSize",pageSize );
         userService.deleteUser(id);
         model.addAttribute("user", new UserRequest());
-        model.addAttribute("moneyByCurrentUserId", moneyService.findByUserId(userService.getUserByLogin(SecurityContextHolder.getContext().getAuthentication().getName()).getId()));
+        model.addAttribute("moneyByCurrentUserId", moneyService.findByUserId(userService.getUserByLogin(SecurityContextHolder.getContext()
+                            .getAuthentication().getName()).getId()));
 
         model.addAttribute("role",SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString());
         model.addAttribute("currentUserId",userService.getUserByLogin(SecurityContextHolder.getContext().getAuthentication().getName()).getId());
@@ -146,7 +148,8 @@ public class UserController {
         model.addAttribute("pageSize",pageSize );
         userService.updateUser(userRequest.getId(),userRequest);
         model.addAttribute("user", new UserRequest());
-        model.addAttribute("moneyByCurrentUserId", moneyService.findByUserId(userService.getUserByLogin(SecurityContextHolder.getContext().getAuthentication().getName()).getId()));
+        model.addAttribute("moneyByCurrentUserId", moneyService.findByUserId(userService.getUserByLogin(SecurityContextHolder
+        .getContext().getAuthentication().getName()).getId()));
 
         model.addAttribute("role", SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString());
         model.addAttribute("currentUserId",userService.getUserByLogin(SecurityContextHolder.getContext().getAuthentication().getName()).getId());
@@ -184,9 +187,9 @@ public class UserController {
         </section>
     </main>
     <footer>
-        <span>GitHub: <a href="https://github.com/YuliAdam"> @YuliAdam.  </a></span>
-        <span> 2024.</span>
-        <p><a href="https://rs.school/courses/javascript-ru"><img src="https://raw.githubusercontent.com/YuliAdam/rsschool-cv/rsschool-cv-html/rsschool-logo.svg" alt="logo rsschool" width="84" height="73"></a></p>
+        <span>GitHub: <a href="https://github.com/YuliAdam"> @YuliAdam./  </a></span>
+        <span> 2024./</span>
+        <span><a href="https://rs.school/courses/javascript-ru"><img id="logo" src="https://raw.githubusercontent.com/YuliAdam/rsschool-cv/rsschool-cv-html/rsschool-logo.svg" alt="logo rsschool"></a></span>
     </footer>
 </body>
 </html>
