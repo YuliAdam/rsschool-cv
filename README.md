@@ -1,2 +1,2 @@
-https://yuliadam.github.io/rsschool-cv/cv.md
-https://yuliadam.github.io/rsschool-cv/index.html
+https://yuliadam.github.io/rsschool-cv/cv
+https://yuliadam.github.io/rsschool-cv/index
