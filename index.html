@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://raw.githubusercontent.com/YuliAdam/rsschool-cv/rsschool-cv-html/img/3789958.png">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="keyworlds" content="programming,cv,programmer,developer,HTML">
+    <title>CV Yuliya Adamovich</title>
+</head>
+<body>
+    <header>
+        <h1><b>Yuliya Adamovich</b></h1>
+        <div class="container">
+            <div>
+                <h2>Contact information</h2>
+                <ul>
+                    <li>tell: +393806959384</li>
+                    <li>email: ylia_adamovich@mail.ru</li>
+                    <li>LinkedIn: yliaadamovich15@gmail.com</li>
+                </ul>
+                <nav>
+                    <h2>Navigation</h2>
+                    <ol>
+                        <li><a href="#about_me">About me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#code_example">Code example</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#languages">Languages</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div><img class="my_photo" src="https://raw.githubusercontent.com/YuliAdam/rsschool-cv/rsschool-cv-html/img/IMG_5632.jpeg" alt="my photo"></div>
+        </div>
+    </header>
+    <main>
+        <section id="about_me">
+            <h2>About me</h2>
+            <p>I am 30 years old, from Belarus. I live in Italy.  I started studying programming at university like and
+                physics and mathematics matters. It was Pascal. I acquire new skills very quickly because I have mathematical
+                mind. I organize learning and working process very good.</p>
+            <p>I started studying Java one year ago. I finished course "PROGRAMMAZIONE Java-M01" by Abforma. I used in my test
+                 project also Java Spring ( Spring Boot, Spring Security, Spring Data JPA, Spring MVC).</p>
+            <p>I like books, doing long walks, travelling. I am a very positive and kind person, but also responsible and serious at work.</p>
+            <p>I want to work in programming.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="list">
+                <li>Java</li>
+                <li>SQL</li>
+                <li>MySQL</li>
+                <li>A little HTML</li>
+            </ul>
+        </section>
+
+        <section id="code_example">
+            <h2>Code example</h2>
+            <pre><code>
+@RestController
+@RequestMapping("/user")
+@Validated
+public class UserController {
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private MoneyService moneyService;
+
+    @GetMapping("/search")
+    public  ModelAndView findUsers(Model model, @RequestParam(required = false) String paramtr,
+                                        @RequestParam(required = false,defaultValue = "user_name") String sort,
+                                        @RequestParam(required = false, defaultValue = "0") Integer pageNumber,
+                                        @RequestParam(required = false, defaultValue = "5") Integer pageSize) {
+        model.addAttribute("role",SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString());
+        model.addAttribute("currentUserId",userService.getUserByLogin(SecurityContextHolder.getContext().getAuthentication().getName()).getId());
+        model.addAttribute("moneyByCurrentUserId", moneyService.findByUserId(userService.getUserByLogin(SecurityContextHolder.getContext()
+            .getAuthentication().getName()).getId()));
+
+        model.addAttribute("paramtr",paramtr );
+        model.addAttribute("sort",sort );
+        model.addAttribute("pageNumber",pageNumber );
+        model.addAttribute("pageSize",pageSize );
+        return new ModelAndView("users","users",userService.findUsers(paramtr, sort, pageNumber, pageSize));
+    }
+            </code></pre>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <ol class="list">
+                <li>Progect travel-agency <a href="https://github.com/YuliAdam/travel-agency.git"><img src="https://raw.githubusercontent.com/YuliAdam/rsschool-cv/rsschool-cv-html/img/icons8-github-48.png" alt="GitHub" width="24" height="24" ></a></li>
+                <li>Progect CV for rsschool <a href="https://github.com/YuliAdam/rsschool-cv.git"><img src="https://raw.githubusercontent.com/YuliAdam/rsschool-cv/rsschool-cv-html/img/icons8-github-48.png" alt="GitHub" width="24" height="24" ></a></li>
+            </ol>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ol class="list">
+                <li>Belarus State University Physics faculty</li>
+                <li><a href="https://raw.githubusercontent.com/YuliAdam/rsschool-cv/rsschool-cv-html/docs/abf%20attestato%20di%20frequenza%20Inglese.pdf">Abforma course "INGLESE-A2"</a></li>
+                <li><a href="https://raw.githubusercontent.com/YuliAdam/rsschool-cv/rsschool-cv-html/docs/abf%20attestato%20di%20frequenza%20Java-M01.pdf">Abforma course "PROGRAMMAZIONE Java-M01"</a></li>
+            </ol>
+        </section>
+
+        <section id="languages">
+            <h2>Languages</h2>
+            <ul class="list">
+                <li>belarusian (native)</li>
+                <li>russian (native)</li>
+                <li>english (A2)</li>
+                <li>italian (C2)</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <span>GitHub: <a href="https://github.com/YuliAdam"> @YuliAdam./  </a></span>
+        <span> 2024./</span>
+        <span><a href="https://rs.school/courses/javascript-ru"><img id="logo" src="https://raw.githubusercontent.com/YuliAdam/rsschool-cv/rsschool-cv-html/img/rsschool-logo.svg" alt="logo rsschool"></a></span>
+    </footer>
+</body>
+</html>
